@@ -1,11 +1,20 @@
 public class Ville {
 
+	//Variables publiques qui comptent les instances
+	public static int nbreInstances = 0;
+
+	//Variable privée qui comptera aussi les instances
+	private static int nbreInstancesBis = 0;
+	
 	private String nomVille;
 	private String nomPays;
 	private int nbreHabitants;
 	private char categorie;
 
 	public Ville() {
+	    //On incrémente nos variables à chaque appel aux constructeurs
+	    nbreInstances++;
+	    nbreInstancesBis++;
 		System.out.println("CrÃ©ation d'une ville !");
 		nomVille = "Inconnu";
 		nomPays = "Inconnu";
@@ -14,12 +23,20 @@ public class Ville {
 	}
 
 	public Ville(String pNom, int pNbre, String pPays) {
+	    //On incrémente nos variables à chaque appel aux constructeurs
+	    nbreInstances++;
+	    nbreInstancesBis++;
 		System.out.println("CrÃ©ation d'une ville avec des paramÃ¨tres !");
 		nomVille = pNom;
 		nomPays = pPays;
 		nbreHabitants = pNbre;
 		this.setCategorie();
 	}
+	
+	  public static int getNombreInstancesBis()
+	  {
+	    return nbreInstancesBis;
+	  }
 
 	// Retourne le nom de la ville
 	public String getNom() {
