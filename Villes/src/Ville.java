@@ -4,12 +4,12 @@ public class Ville {
 	public static int nbreInstances = 0;
 
 	//Variable privée qui comptera aussi les instances
-	private static int nbreInstancesBis = 0;
+	protected static int nbreInstancesBis = 0;
 	
-	private String nomVille;
-	private String nomPays;
-	private int nbreHabitants;
-	private char categorie;
+	protected String nomVille;
+	protected String nomPays;
+	protected int nbreHabitants;
+	protected char categorie;
 
 	public Ville() {
 	    //On incrémente nos variables à chaque appel aux constructeurs

@@ -51,6 +51,9 @@ public class VilleMain {
 		System.out.println("\n"+v1.decrisToi());
 		System.out.println(v.decrisToi());
 		System.out.println(v2.decrisToi()+"\n");
-		System.out.println(v1.comparer(v2));
+		System.out.println(v1.comparer(v2)+"\n");
+		
+		Capitale cap = new Capitale();
+		System.out.println(cap.decrisToi());
 	}
 }
